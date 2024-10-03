@@ -1,0 +1,107 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f7f7f7;
+  }
+
+  .game {
+    border-bottom: 10px solid #67cb57;
+    height: 300px;
+    width: 800px;
+    position: relative;
+    overflow: hidden;
+    background: linear-gradient(#87CEEB, #E0F6FF);
+  }
+  
+  .score {
+    position: absolute;
+    top: 30px;
+    left: 0;
+    font-size: x-large;
+    z-index: 10;
+  }
+  
+  .luigi {
+    position: absolute;
+    bottom: 0;
+    background-image: url(../image/luigi-GIf-cortado.gif);
+    width: 280px;
+    height: 60px;
+    background-size: 100px;
+    background-repeat: no-repeat;
+    z-index: 10;
+  }
+
+
+  .pipe{
+    position: absolute;
+    bottom: 0;
+    background-image: url(../image/pipe.png);
+    width: 35px;
+    height: 45px;
+    background-size: 35px;
+    background-repeat: no-repeat;
+    animation: pipe 3s linear infinite;
+  }
+
+  .jump {
+    animation: jump 1.1s linear;
+  }
+
+  .clouds {
+    width: 350px;
+    position: absolute;
+    animation: clouds 10s infinite linear;
+  }
+
+  @keyframes pipe {
+    from {
+        right: -80px;
+    }
+
+    to{
+        right: 100%;
+    }
+    
+}
+  
+
+  @keyframes jump {
+    0% {
+      bottom: 0;
+    }
+  
+    30% {
+      bottom: 80px;
+    }
+  
+    50% {
+      bottom: 100px;
+    }
+  
+    80% {
+      bottom: 80px;
+    }
+  
+    100% {
+      bottom: 0;
+    }
+  }
+  
+  @keyframes clouds {
+    from {
+        right: -400px;
+    }
+
+    to {
+        right: 100%;   
+    }
+  }
